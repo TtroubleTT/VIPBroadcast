@@ -32,7 +32,7 @@ namespace VIPBroadcast
             }
 
             Player player = Player.Get(sender);
-            if (DateTime.Now < Cooldown[player])
+            if (Cooldown.ContainsKey(player) && DateTime.Now < Cooldown[player])
             {
                 response = $"This command is still on cooldown. Try again in {(Cooldown[player] - DateTime.Now).TotalSeconds} seconds.";
 
