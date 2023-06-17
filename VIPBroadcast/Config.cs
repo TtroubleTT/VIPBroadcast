@@ -18,9 +18,9 @@ namespace VIPBroadcast
         public bool Debug { get; set; } = true;
 
         [Description("How long the vip broadcast should last.")]
-        public static ushort BroadcastLength { get; set; } = 5;
+        public ushort BroadcastLength { get; set; } = 5;
 
         [Description("How long the cooldown should be until they can send another message.")]
-        public static float MessageCooldown { get; set; } = 10f;
+        public float MessageCooldown { get; set; } = 10f;
     }
 }

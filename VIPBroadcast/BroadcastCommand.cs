@@ -39,14 +39,14 @@ namespace VIPBroadcast
                 return false;
             }
 
-            Cooldown[player] = DateTime.Now.AddSeconds(VIPBroadcast.Config.MessageCooldown);
+            Cooldown[player] = DateTime.Now.AddSeconds(Plugin.Instance.Config.MessageCooldown);
 
             string message = string.Empty;
             foreach (string s in arguments)
                 message += $"{s} ";
             message = message.TrimEnd(' ');
 
-            Map.Broadcast(VIPBroadcast.Config.BroadcastLength, message);
+            Map.Broadcast(Plugin.Instance.Config.BroadcastLength, message);
             response = $"Broadcast sent.";
             return true;
         }
